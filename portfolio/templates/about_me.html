@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="/">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+    </div>
+</nav>
+
+<header class="bg-dark text-light py-3">
+    <div class="container">
+        <h1>About Me</h1>
+    </header>
+    <main class="container py-5">
+        <div class="row">
+            <div class="col-lg-8 mb-5">
+                <h2 class="text-primary mb-3">My Journey in Tech</h2>
+                <p>Hi there! Welcome to my About Me page. Let me tell you a bit about myself and my journey in the world of technology.</p>
+                <p class="font-weight-bold">Early Coding Explorations:</p>
+                <p>My fascination with coding began at a surprisingly young age - nine years old! Back then, my explorations were like dipping my toes into the vast ocean of programming. I dabbled in HTML, learning the basics of web page structure, and tinkered with Visual Basic, taking my first steps into the world of application development.</p>
+                <p class="font-weight-bold">Finding my passion:</p>
+                <p>As I progressed through my academic journey, particularly after high school, the path I wanted to take became undeniably clear. My passion for technology intensified, and I knew I had to pursue my career in this exciting field.</p>
+                <p class="font-weight-bold">Solidifying My Foundation:</p>
+                <p>Over time, I solidified my proficiency in C and C++. These languages provided a robust foundation in programming principles, teaching me essential concepts like memory management and low-level control.</p>
+                <p class="font-weight-bold">The Allure of Python:</p>
+                <p>However, in recent times, it's Python that has truly captured my focus. Its elegance and flexibility have captivated me. It's a powerful language that not only enhances my programming skills but also unlocks the fascinating world of machine learning and deep learning.</p>
+            </div>
+            <div class="skills">
+                <!--<img src="{% static 'images/your_profile_picture.jpg' %}" alt="Kirti's Profile Picture" class="img-fluid rounded-circle mb-3">-->
+                <h2 class="text-center mb-3">Skills</h2>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">C</li>
+                    <li class="list-group-item">C++</li>
+                    <li class="list-group-item">Java</li>
+                    <li class="list-group-item">Python</li>
+                    <li class="list-group-item">Tensorflow</li>
+                    <li class="list-group-item">HTML</li>
+                    <li class="list-group-item">Django</li>
+                    <li class="list-group-item">MySQL</li>
+                    <li class="list-group-item">Linux</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
