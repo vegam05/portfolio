@@ -6,43 +6,56 @@
     <title>Portfolio_Kirti</title>
     <link rel="stylesheet" href="static/css/styles.css">
     <link rel="icon" href="static/icons/favicon.ico" type="image/x-icon"/>
-    
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nunito:wght@400;700&display=swap&family=Montserrat:wght@400;700" rel="stylesheet">
 </head>
 <body>
     <nav>
-  <div class="logo">VEGAM</div>
-  <ul>
-    <li><a href="{% url 'about_me' %}">About Me</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="{% url 'about_me' %}">Skills</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+        <div class="logo">
+            <img src="static/icons/favicon.ico" alt="Logo" style="width: 50px; height: 50px;">
+        </div>
+        <div class="collapsible-menu">
+            <input type="checkbox" id="menu">
+            <label for="menu"></label>
+            <div class="menu-content">
+              <ul>
+                <li><a href="{% url 'about_me' %}">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="{% url 'about_me' %}">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+        </div>
+    </nav>
 
-<header>
-  <div class="header">
-    <div class="welcome-text">Hello there, Welcome to my portfolio website</div>
-    <div class="subtext">Discover my projects, skills, and experience in various domains including, but not limited to <br>Artificial Intelligence, Machine Learning, and web development. Let's build something great together!</div>
-    <div class="profile-block">
-      <img class="profile-img" src="static/images/myphoto.jpg" alt="Your Photo" class="img-fluid rounded-circle mb-3">
-      <div class="description">
-        <p>A penultimate at Sikkim Manipal Institute of Technology. A passionate AI/ML developer with decent frontend experience.</p>
-      </div>
-    </div>
-  </div>
-</header> 
-          
-       
+    <header>
+        <div class="header">
+            <div class="welcome-text">Hello there, Welcome to my portfolio website</div>
+            <div class="subtext">Discover my projects, skills, and experience in various domains including, but not limited to <br>Artificial Intelligence, Machine Learning, and web development. Let's build something great together!</div>
+            <div class="profile-block">
+                <img class="profile-img" src="static/images/myphoto.jpg" alt="Your Photo" class="img-fluid rounded-circle mb-3">
+                <div class="description">
+                    <p>A penultimate at Sikkim Manipal Institute of Technology. A passionate AI/ML developer with decent frontend experience.</p>
+                </div>
+            </div>
+        </div>
+    </header> 
 
     <div class="container">
         <section id="projects">
             <h2 class="text-center mb-3">My Projects</h2>
-            <div class="project" align="center">
-                <img src="static/images/project1.jpg" alt="Project 1" width="400" height="300">
+            <div class="project1" align="center">
+                <img src="static/images/flower.jpg" alt="Project 1" width="400" height="300">
                 <h3>Categorical Flower Classifier</h3>
                 <p>Trained a 16-layered VGG CNN model to classify 5 flower varieties and deployed it as a web application using Django.</p>
                 <p><strong>Technologies used:</strong> Python, Django, TensorFlow, HTML, CSS</p>
                 <a href="https://github.com/vegam05/findtheflower" class="btn">View Project</a>
+            </div>
+            <div class="project2" align="center">
+                <img src="static/images/platepal.jpg" alt="Project 2" width="400" height="300">
+                <h3>Platepal: Your foody buddy</h3>
+                <p>A web application that has a CNN model running at its backend that can detect and classify the food image provided. Also has AI capabilities along-with <br>patient health integration system that enables the app to provide recommendations.</p>
+                <p><strong>Technologies used:</strong> Python, Django, TensorFlow, HTML, CSS, MySQL, JavaScript</p>
+                <a href="https://github.com/vegam05/PlatePal" class="btn">View Project</a>
             </div>
             <!-- More projects -->
         </section>
@@ -65,20 +78,6 @@
             </a>
         </div>
     </footer>
-    <script>
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                if (href.startsWith('#')) {
-                    e.preventDefault();
-                    document.querySelector(href).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
-    
+    <script src="static/js/scripts.js"></script>
 </body>
 </html>
-
