@@ -10,21 +10,26 @@
 </head>
 <body>
     <nav>
-        <div class="logo">
-            <img src="static/icons/favicon.ico" alt="Logo" style="width: 50px; height: 50px;">
-        </div>
         <div class="collapsible-menu">
             <input type="checkbox" id="menu">
-            <label for="menu"></label>
+            <label for="menu">
+                <div class="toggle">
+                    <div id="bar1" class="bars"></div>
+                    <div id="bar2" class="bars"></div>
+                    <div id="bar3" class="bars"></div>
+                </div>
+            </label>
             <div class="menu-content">
-              <ul>
-                <li><a href="{% url 'about_me' %}">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="{% url 'about_me' %}">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
+                <ul>
+                    <li><a href="{% url 'about_me' %}">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="{% url 'about_me' %}">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
         </div>
+        
+        
     </nav>
 
     <header>
@@ -32,7 +37,7 @@
             <div class="welcome-text">Hello there, Welcome to my portfolio website</div>
             <div class="subtext">Discover my projects, skills, and experience in various domains including, but not limited to <br>Artificial Intelligence, Machine Learning, and web development. Let's build something great together!</div>
             <div class="profile-block">
-                <img class="profile-img" src="static/images/myphoto.jpg" alt="Your Photo" class="img-fluid rounded-circle mb-3">
+                <img class="profile-img" src="static/images/myphoto1.jpg" alt="Your Photo" class="img-fluid rounded-circle mb-3">
                 <div class="description">
                     <p>A penultimate at Sikkim Manipal Institute of Technology. A passionate AI/ML developer with decent frontend experience.</p>
                 </div>
@@ -43,21 +48,39 @@
     <div class="container">
         <section id="projects">
             <h2 class="text-center mb-3">My Projects</h2>
-            <div class="project1" align="center">
-                <img src="static/images/flower.jpg" alt="Project 1" width="400" height="300">
-                <h3>Categorical Flower Classifier</h3>
-                <p>Trained a 16-layered VGG CNN model to classify 5 flower varieties and deployed it as a web application using Django.</p>
-                <p><strong>Technologies used:</strong> Python, Django, TensorFlow, HTML, CSS</p>
-                <a href="https://github.com/vegam05/findtheflower" class="btn">View Project</a>
+            <div class="project-container">
+                <div class="card project1">
+                    <p class="heading">Find The Flower</p>
+                    <p><strong>Trained a 16-layered VGG CNN model to classify 5 flower varieties and deployed it as a web application using Django that can detect the flower's name based on the picture provided.</strong></p>
+                    <a href="https://github.com/vegam05/FindTheFlower" class="cssbuttons-io">
+                        <span
+                          ><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path
+                              d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+                              fill="currentColor"
+                            ></path>
+                          </svg>
+                          Code</span>
+                        </a>
+                </div>
+                <div class="card project2">
+                    <p class="heading">Platepal: Your foody buddy</p>
+                    <p><strong>A web app with a CNN backend classifies food images and uses AI to provide dietary recommendations based on integrated patient health data.</strong></p>
+                    <a href="https://github.com/vegam05/Platepal" class="cssbuttons-io">
+                        <span
+                          ><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path
+                              d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+                              fill="currentColor"
+                            ></path>
+                          </svg>
+                          Code</span>
+                        </a>
+                      
+                </div>
             </div>
-            <div class="project2" align="center">
-                <img src="static/images/platepal.jpg" alt="Project 2" width="400" height="300">
-                <h3>Platepal: Your foody buddy</h3>
-                <p>A web application that has a CNN model running at its backend that can detect and classify the food image provided. Also has AI capabilities along-with <br>patient health integration system that enables the app to provide recommendations.</p>
-                <p><strong>Technologies used:</strong> Python, Django, TensorFlow, HTML, CSS, MySQL, JavaScript</p>
-                <a href="https://github.com/vegam05/PlatePal" class="btn">View Project</a>
-            </div>
-            <!-- More projects -->
         </section>
     </div>
 
