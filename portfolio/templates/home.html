@@ -9,6 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nunito:wght@400;700&display=swap&family=Montserrat:wght@400;700" rel="stylesheet">
 </head>
 <body>
+  <div class="loader">
+    <div data-glitch="Loading..." class="glitch">Loading...</div>
+ </div>
     <nav>
         <div class="collapsible-menu">
             <input type="checkbox" id="menu">
@@ -21,9 +24,9 @@
             </label>
             <div class="menu-content">
                 <ul>
-                    <li><a href="{% url 'about_me' %}">About Me</a></li>
+                    <li><a href="#about_me">About Me</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="{% url 'about_me' %}">Skills</a></li>
+                    <li><a href="#skills">Skills</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -33,22 +36,32 @@
     </nav>
 
     <header>
-        <div class="header">
-            <div class="welcome-text">Hello there, Welcome to my portfolio website</div>
-            <div class="subtext">Discover my projects, skills, and experience in various domains including, but not limited to <br>Artificial Intelligence, Machine Learning, and web development. Let's build something great together!</div>
-            <div class="profile-block">
-                <img class="profile-img" src="static/images/myphoto1.jpg" alt="Your Photo" class="img-fluid rounded-circle mb-3">
-                <div class="description">
-                    <p>A penultimate at Sikkim Manipal Institute of Technology. A passionate AI/ML developer with decent frontend experience.</p>
-                </div>
+      <div class="header">
+        <div class="welcome-text">Hello there, Welcome to my portfolio website</div>
+        <div class="profile-block">
+          <div class="profile-column">
+            <img class="profile-img" src="static/images/myphoto1.jpg" alt="Your Photo">
+            <div class="container-button1">
+              <div class="hover bt-1"></div>
+              <div class="hover bt-2"></div>
+              <div class="hover bt-3"></div>
+              <div class="hover bt-4"></div>
+              <div class="hover bt-5"></div>
+              <div class="hover bt-6"></div>
+              <button1></button1>
             </div>
+          </div>
+          <div class="typewriter-container">
+            <div class="pfp_content"></div>
+          </div>
         </div>
+      </div>
     </header> 
 
     <div class="container">
         <section id="projects">
             <div class="head">
-                <h1 class="project_btn">
+                <h1 class="project">
                     PROJECTS
                 </h1>
             </div>
@@ -56,41 +69,42 @@
                 <div class="card project1">
                     <div class="card-content">
                         <p class="heading">Find The Flower</p>
-                        <p><strong>Trained a 16-layered VGG CNN model to classify 5 flower varieties and deployed it as a web application using Django that can detect the flower's name based on the picture provided.</strong></p>
+                        <strong>Trained a 16-layered VGG CNN model to classify 5 flower varieties and deployed it as a web application using Django that can detect the flower's name based on the picture provided.</strong>
                     </div>
-                    <div class="item-hints">
-                        <div class="hint" data-position="4">
-                            <span class="hint-radius"></span>
-                            <span class="hint-dot">Skills</span>
-                            <div class="hint-content do--split-children">
-                                <p>TensorFlow · CSS · Keras · Django · CNN · Python · Computer Vision · HTML5</p>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="https://github.com/vegam05/FindTheFlower" class="cssbuttons-io">
-                        <span style="color:black;">
-                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 0h24v24H0z" fill="none"></path>
-                                <path d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z" fill="currentColor"></path>
-                            </svg>
-                            Code
-                        </span>
-                    </a>
+                    <div class="button2-icon1">
+                      <div class="icon1">
+                        <svg viewBox="0 0 24 24">
+                          <path
+                            d="M12 0.296997C5.37 0.296997 0 5.67 0 12.297C0 17.6 3.438 22.097 8.205 23.682C8.805 23.795 9.025 23.424 9.025 23.105C9.025 22.82 9.015 22.065 9.01 21.065C5.672 21.789 4.968 19.455 4.968 19.455C4.422 18.07 3.633 17.7 3.633 17.7C2.546 16.956 3.717 16.971 3.717 16.971C4.922 17.055 5.555 18.207 5.555 18.207C6.625 20.042 8.364 19.512 9.05 19.205C9.158 18.429 9.467 17.9 9.81 17.6C7.145 17.3 4.344 16.268 4.344 11.67C4.344 10.36 4.809 9.29 5.579 8.45C5.444 8.147 5.039 6.927 5.684 5.274C5.684 5.274 6.689 4.952 8.984 6.504C9.944 6.237 10.964 6.105 11.984 6.099C13.004 6.105 14.024 6.237 14.984 6.504C17.264 4.952 18.269 5.274 18.269 5.274C18.914 6.927 18.509 8.147 18.389 8.45C19.154 9.29 19.619 10.36 19.619 11.67C19.619 16.28 16.814 17.295 14.144 17.59C14.564 17.95 14.954 18.686 14.954 19.81C14.954 21.416 14.939 22.706 14.939 23.096C14.939 23.411 15.149 23.786 15.764 23.666C20.565 22.092 24 17.592 24 12.297C24 5.67 18.627 0.296997 12 0.296997Z"
+                            fill="#222229"
+                          ></path>
+                        </svg>
+                      </div>
+                      <div class="cube">
+                        <span class="side front">hover me</span>
+                        <span class="side top">check it on github</span>
+                      </div>
+                    </div>                    
                 </div>
                 <div class="card project2">
+                  <div class="card-content">
                     <p class="heading">Platepal: Your foody buddy</p>
-                    <p><strong>A web app with a CNN backend classifies food images and uses AI to provide dietary recommendations based on integrated patient health data.</strong></p>
-                    <a href="https://github.com/vegam05/Platepal" class="cssbuttons-io">
-                        <span style="color:black;"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 0h24v24H0z" fill="none"></path>
-                            <path
-                              d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
-                              fill="currentColor"
-                            ></path>
-                          </svg>
-                          Code</span>
-                        </a>
-                      
+                    <strong>A web app with a CNN backend classifies food images and uses AI to provide dietary recommendations based on integrated patient health data.</strong>
+                  </div>
+                  <div class="button2-icon1">
+                    <div class="icon1">
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="M12 0.296997C5.37 0.296997 0 5.67 0 12.297C0 17.6 3.438 22.097 8.205 23.682C8.805 23.795 9.025 23.424 9.025 23.105C9.025 22.82 9.015 22.065 9.01 21.065C5.672 21.789 4.968 19.455 4.968 19.455C4.422 18.07 3.633 17.7 3.633 17.7C2.546 16.956 3.717 16.971 3.717 16.971C4.922 17.055 5.555 18.207 5.555 18.207C6.625 20.042 8.364 19.512 9.05 19.205C9.158 18.429 9.467 17.9 9.81 17.6C7.145 17.3 4.344 16.268 4.344 11.67C4.344 10.36 4.809 9.29 5.579 8.45C5.444 8.147 5.039 6.927 5.684 5.274C5.684 5.274 6.689 4.952 8.984 6.504C9.944 6.237 10.964 6.105 11.984 6.099C13.004 6.105 14.024 6.237 14.984 6.504C17.264 4.952 18.269 5.274 18.269 5.274C18.914 6.927 18.509 8.147 18.389 8.45C19.154 9.29 19.619 10.36 19.619 11.67C19.619 16.28 16.814 17.295 14.144 17.59C14.564 17.95 14.954 18.686 14.954 19.81C14.954 21.416 14.939 22.706 14.939 23.096C14.939 23.411 15.149 23.786 15.764 23.666C20.565 22.092 24 17.592 24 12.297C24 5.67 18.627 0.296997 12 0.296997Z"
+                          fill="#222229"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="cube">
+                      <span class="side front">hover me</span>
+                      <span class="side top">check it on github</span>
+                    </div>
+                  </div>
                 </div>
             </div>
         </section>
@@ -188,6 +202,63 @@
             </li>
           </ul>          
     </footer>
-    <script src="static/js/scripts.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+  const loader = document.querySelector('.loader');
+  
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      loader.style.display = 'none';
+    }, 1000); // Delay of 1 second (1000 milliseconds)
+  });
+});
+document.body.style.overflow = 'visible';
+
+document.addEventListener('DOMContentLoaded', function(event) {
+  var dataText = ["I'm Kirti Raj", "I'm into...", "Artificial Intelligence"," Machine Learning", "WebDev", "Data Science","Bodybuilding","Gaming"];
+  
+  function typeWriter(text, i, fnCallback) {
+    if (i < text.length) {
+      document.querySelector(".pfp_content").innerHTML = text.substring(0, i+1) + '<span aria-hidden="true"></span>';
+      setTimeout(function() {
+        typeWriter(text, i + 1, fnCallback)
+      }, 100);
+    } else if (typeof fnCallback == 'function') {
+      setTimeout(fnCallback, 700);
+    }
+  }
+
+  function StartTextAnimation(i) {
+    if (i >= dataText.length) {
+      i = 0; // Reset to the beginning of the array
+    }
+    
+    typeWriter(dataText[i], 0, function() {
+      // Erase the text
+      eraseText(function() {
+        // Start the next text
+        StartTextAnimation(i + 1);
+      });
+    });
+  }
+
+  function eraseText(fnCallback) {
+    var element = document.querySelector(".pfp_content");
+    var text = element.innerText;
+    var interval = setInterval(function() {
+      if (text.length > 0) {
+        element.innerHTML = text.substring(0, text.length - 1) + '<span aria-hidden="true"></span>';
+        text = text.substring(0, text.length - 1);
+      } else {
+        clearInterval(interval);
+        fnCallback();
+      }
+    }, 50);
+  }
+
+  // start the text animation
+  StartTextAnimation(0);
+});
+    </script>
 </body>
 </html>
