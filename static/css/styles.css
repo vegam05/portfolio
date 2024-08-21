@@ -1,7 +1,9 @@
 body {
-  margin: 0;
-  padding: 0;
-  background-color: #343a40;
+  background-image: url('../images/conta_back.jpg'); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire screen */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps the background image fixed while scrolling */
+  background-position: center;
   color: rgb(79, 71, 71);
   overflow: hidden;
 }
@@ -171,10 +173,7 @@ nav {
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
   transition-duration: 400ms;
   transition-property: color;
-  text-decoration: none; /* Remove underline */
 }
-
-/* Additional hover effects or responsive settings if needed */
 #navbar ul li a:focus,
 #navbar ul li a:hover {
   color: #fff;
@@ -261,7 +260,7 @@ nav {
 
 /* Toggle Button CSS */
 #checkbox {
-  display: none;/*Hides the checkbox*/
+  display: none;
 }
 
 .toggle {
@@ -312,7 +311,7 @@ nav {
 
 /* Styles for wide screens */
 @media (min-width: 768px) {
-  .collapsible-menu label, /* Hide the toggle button on wide screens */
+  .collapsible-menu label, 
   .collapsible-menu input[type="checkbox"] {
       display: none;
   }
@@ -327,7 +326,7 @@ nav {
 
   .menu-content ul {
       display: flex;
-      gap: 20px; /* Space between menu items */
+      gap: 30px; /* Space between menu items */
   }
 
   .menu-content ul li {
@@ -355,12 +354,12 @@ nav {
   height: auto;
   min-height: 400px;
   background-size: cover;
-  background-image: url('../images/conta_back.jpg') ;
+  /*background-image: url('../images/conta_back.jpg') ;*/
   background-position: scroll center;
   background-repeat: no-repeat;
 }
 .welcome-text {
-  font-size: 50px;
+  font-size: 55px;
   font-weight: bold;
   font-family: Courier, monospace;
   color: #ffffff;
@@ -376,7 +375,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 20px;
+  margin-top: 85px;
   padding: 60px;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.5);
@@ -403,9 +402,9 @@ nav {
 }
 
 .profile-img {
-  width: 300px;
+  width: 320px;
   height: 280px;
-  margin-right: 50px; /* Reduced margin */
+  margin-right: 50px; 
   margin-left: 100px;
   margin-bottom: 10px;
   animation: fadeIn 1.5s ease-out;
@@ -435,9 +434,7 @@ nav {
   cursor: pointer;
 }
 
-.container-button1:active {
-  transform: scale(0.95);
-}
+
 
 .hover {
   position: absolute;
@@ -593,13 +590,13 @@ button1::after {
 }
 
 .typewriter-container {
-  width: 250px; /* Set a fixed width */
-  height: 2.4em; /* Set a fixed height, adjust as needed */
+  width: 290px; 
+  height: 2.4em; 
   overflow: none;
-  flex: 1; /* Added to allow container to grow */
-  max-width: calc(100% - 350px); /* Adjust based on image width + margin */
+  flex: 1; 
+  max-width: calc(100% - 350px); 
   height: 2.4em;
-  overflow: none; /* Changed from none to hidden */
+  overflow: none; 
 }
 
 
@@ -642,13 +639,9 @@ button1::after {
 
 .container {
     position: relative;
-    padding: 2em;
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
-    margin-top: 0;
+    padding: 4em;
+    margin-top: 50px;
     z-index: 2;
-    background-image: url('../images/conta_back.jpg');
 }
 
 #projects {
@@ -657,35 +650,47 @@ button1::after {
   padding-top: 50px; 
 }
 .projects-heading {
-  font-size: 36px;
+  font-size: 80px;
   font-weight: 700;
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 4px;
   text-shadow: 0 0 5px rgba(191, 235, 235, 0.7), 0 0 10px rgba(175, 244, 244, 0.7), 0 0 20px rgba(110, 141, 141, 0.7);
-  margin-bottom: 100px;
+  margin-bottom: 200px;
   border-bottom: 2px solid #ffffff;
+  font-family: Courier, monospace;
 }
 
 .project-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 60px;
+  justify-content: space-around;
   position: relative;
   z-index: 50;
-  
+  margin-top: 100px;
+  margin-bottom: 40px;
 }
 
 .card {
-  width: 190px;
-  height: 254px;
+  width: 300px;
+  height: 320px;
   border-radius: 30px;
   background: #212121;
   box-shadow: 15px 15px 30px rgb(25, 25, 25),
               -15px -15px 30px rgb(60, 60, 60);
+  color: #ffffff;
+  font-family: Courier, monospace;
+  padding: 20px;
+  margin: 20px;
+  font-size: 18px;
  }
+ .card .heading{
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  font-family: Courier, monospace;
+}
 
 /*Button css starts*/
 .button2-icon1 {
@@ -761,34 +766,46 @@ button1::after {
   background-repeat: no-repeat;
   margin-top: 0;
   z-index: 2;
-  background-image: url('../images/conta_back.jpg');
 }
+
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px; /* Adjust spacing between logos */
-  padding: 20px;
+  gap: 40px; /* Adjust spacing between logos */
+  padding: 130px;
 }
 
 .skill-item {
-  flex: 1 1 100px; /* Adjust the size of the logos */
+  flex: 1 1 90px; /* Adjust the size of the logos */
   text-align: center;
+  padding: 20px;
+  border: 2px solid #ffffff; /* Thin white border */
+  border-radius: 20px; /* Slightly rounded corners */
+  background-color: transparent; /* Initially transparent */
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition */
 }
 
 .skill-item img {
-  max-width: 100px; /* Set the maximum width of the logos */
-  max-height: 100px; /* Set the maximum height of the logos */
+  max-width: 125px; /* Set the maximum width of the logos */
+  max-height: 125px; /* Set the maximum height of the logos */
   object-fit: contain; /* Ensure logos maintain their aspect ratio */
   height: auto;
   transition: transform 0.3s ease-in-out;
 }
 
-.skill-item img:hover {
-  transform: scale(1.1); /* Zoom effect on hover */
+.skill-item:hover {
+  background-color: #ffffff; /* Fill with white color on hover */
+  transform: scale(1.05); /* Slight zoom effect on the box */
 }
+
+.skill-item img:hover {
+  transform: scale(1.1); /* Zoom effect on the logo */
+}
+
 .skills {
-  font-size: 36px;
+  font-size: 80px;
+  font-family: Courier, monospace;
   font-weight: 600;
   color: #ffffff;
   text-align: center;
@@ -796,25 +813,43 @@ button1::after {
   letter-spacing: 2px;
   border-bottom: 2px solid #ffffff;
   display: inline-block;
-  padding-bottom: 0px;/*space bw text and underline*/
+  padding-bottom: 0px; /* Space between text and underline */
   margin-bottom: 30px;
   text-shadow: 0 0 5px rgba(191, 235, 235, 0.7), 0 0 10px rgba(175, 244, 244, 0.7), 0 0 20px rgba(110, 141, 141, 0.7);
 }
+
 /*Skills css ends*/
 
 /*Button CSS ends*/
 
 footer {
-  background-image: url('../images/conta_back.jpg');
   color: white;
   text-align: center;
   padding: 2em 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 0em; 
-  backdrop-filter: blur(10px);
+  margin-top: 0em;
+  
+  
+  /* Gradient Background */
+  background: linear-gradient(270deg, #080808, #7f7e7e, #272424);
+  background-size: 600% 600%;
+  animation: gradientAnimation 12s ease infinite;
 }
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
 /*Footer social icons*/
 ul {
