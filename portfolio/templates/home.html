@@ -129,6 +129,9 @@
               <div class="skill-item">
                 <img src="static/icons/latex.png" alt="latex">
               </div>
+              <div class="skill-item">
+                <img src="static/icons/shell_script.png" alt="shell-script">
+              </div>
               
           </div>
       </section>
@@ -159,7 +162,7 @@
                   ></path>
                 </svg>
               </a>
-              <div class="tooltip">LinkedIn</div>
+              <div class="tooltip" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">LinkedIn</div>
             </li>
             <li class="icon-content">
               <a href="https://www.github.com/vegam05" aria-label="GitHub" data-social="github">
@@ -203,7 +206,7 @@
                   ></path>
                 </svg>
               </a>
-              <div class="tooltip">Instagram</div>
+              <div class="tooltip" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Instagram</div>
             </li>
             <li class="icon-content">
               <a href="https://youtube.com/@vegam05" aria-label="Youtube" data-social="youtube">
@@ -303,6 +306,34 @@
             }
         };
     });
+
+    document.addEventListener("DOMContentLoaded", function() {
+    const projectsHeading = document.querySelector('.projects-heading');
+    const skillsHeading = document.querySelector('.skills');
+
+    function handleScroll() {
+        const projectsSection = document.getElementById('projects');
+        const skillsSection = document.getElementById('skills');
+        const screenPosition = window.innerHeight / 1.3;
+
+        // Function to toggle the class based on scroll position
+        function toggleAnimation(section, heading) {
+            const sectionPosition = section.getBoundingClientRect();
+            if (sectionPosition.top < screenPosition && sectionPosition.bottom > 0) {
+                heading.classList.add('slide-in');
+            } else {
+                heading.classList.remove('slide-in'); // Remove class when heading is out of view
+            }
+        }
+
+        toggleAnimation(projectsSection, projectsHeading);
+        toggleAnimation(skillsSection, skillsHeading);
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Trigger the scroll handler initially
+});
+
     </script>
 </body>
 </html>

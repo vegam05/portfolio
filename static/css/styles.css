@@ -662,6 +662,14 @@ button1::after {
   margin-bottom: 200px;
   border-bottom: 2px solid #ffffff;
   font-family: Courier, monospace;
+  opacity: 0; /* Initially hidden */
+  transform: translateX(-100%); /* Positioned off-screen to the left */
+  transition: transform 1s ease-out, opacity 1s ease-out; /* Smooth transition for both transform and opacity */
+}
+
+.projects-heading.slide-in {
+  opacity: 1;
+  transform: translateX(0); /* Moves the heading to its original position */
 }
 
 .project-container {
@@ -807,18 +815,25 @@ button1::after {
 
 .skills {
   font-size: 80px;
-  font-family: Courier, monospace;
-  font-weight: 600;
+  font-weight: 700;
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  border-bottom: 2px solid #ffffff;
-  display: inline-block;
-  padding-bottom: 0px; /* Space between text and underline */
-  margin-bottom: 30px;
+  letter-spacing: 4px;
   text-shadow: 0 0 5px rgba(191, 235, 235, 0.7), 0 0 10px rgba(175, 244, 244, 0.7), 0 0 20px rgba(110, 141, 141, 0.7);
+  margin-bottom: 200px;
+  border-bottom: 2px solid #ffffff;
+  font-family: Courier, monospace;
+  opacity: 0; /* Initially hidden */
+  transform: translateX(-100%); /* Positioned off-screen to the left */
+  transition: transform 1s ease-out, opacity 1s ease-out; /* Smooth transition for both transform and opacity */
 }
+
+.skills.slide-in {
+  opacity: 1;
+  transform: translateX(0); /* Moves the heading to its original position */
+}
+
 
 /*Skills css ends*/
 
