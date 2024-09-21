@@ -36,19 +36,9 @@
 
     <header>
       <div class="header">
-        <div class="welcome-text">Hello there, Welcome to my portfolio website</div>
+        <div class="welcome-text">Hello there</div>
         <div class="profile-block">
           <div class="profile-column">
-            <img class="profile-img" src="static/images/myphoto1.jpg" alt="Your Photo">
-            <div class="container-button1">
-              <div class="hover bt-1"></div>
-              <div class="hover bt-2"></div>
-              <div class="hover bt-3"></div>
-              <div class="hover bt-4"></div>
-              <div class="hover bt-5"></div>
-              <div class="hover bt-6"></div>
-              <button1></button1>
-            </div>
           </div>
           <div class="typewriter-container">
             <div class="pfp_content"></div>
@@ -132,6 +122,12 @@
               <div class="skill-item">
                 <img src="static/icons/shell_script.png" alt="shell-script">
               </div>
+              <div class="skill-item">
+                <img src="static/icons/keras.png" alt="keras">
+              </div>
+              <div class="skill-item">
+                <img src="static/icons/java.png" alt="java">
+              </div>
               
           </div>
       </section>
@@ -182,7 +178,7 @@
                   ></path>
                 </svg>
               </a>
-              <div class="tooltip">GitHub</div>
+              <div class="tooltip" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">GitHub</div>
             </li>
             <li class="icon-content">
               <a
@@ -226,9 +222,10 @@
                   ></path>
                 </svg>
               </a>
-              <div class="tooltip">Youtube</div>
+              <div class="tooltip" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">YouTube</div>
             </li>
-          </ul>          
+          </ul>     
+          <p style="margin: 10px;font-size: 14px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Designed and Developed by Kirti Raj |© 2024 All rights reserved</p>     
     </footer>
     <script>
       document.addEventListener('DOMContentLoaded', function()
@@ -245,7 +242,7 @@
        document.body.style.overflow = 'visible';
 
        document.addEventListener('DOMContentLoaded', function(event) {
-       var dataText = ["I'm Kirti Raj", "I'm into...","Machine Learning","Deep Learning","Artificial Intelligence", "WebDev", "Data Science","Bodybuilding","Gaming"];
+       var dataText = ["Kirti Raj this side", "I'm into...","Machine Learning","Deep Learning","Artificial Intelligence", "WebDev", "Data Science","Bodybuilding","Gaming"];
   
       function typeWriter(text, i, fnCallback) 
       {
@@ -310,6 +307,8 @@
     document.addEventListener("DOMContentLoaded", function() {
     const projectsHeading = document.querySelector('.projects-heading');
     const skillsHeading = document.querySelector('.skills');
+    const projectCards = document.querySelectorAll('.card'); // Select all the project cards
+    const skillItems = document.querySelectorAll('.skill-item'); // Select all skill items
 
     function handleScroll() {
         const projectsSection = document.getElementById('projects');
@@ -317,17 +316,23 @@
         const screenPosition = window.innerHeight / 1.3;
 
         // Function to toggle the class based on scroll position
-        function toggleAnimation(section, heading) {
+        function toggleAnimation(section, heading, elements) {
             const sectionPosition = section.getBoundingClientRect();
             if (sectionPosition.top < screenPosition && sectionPosition.bottom > 0) {
                 heading.classList.add('slide-in');
+                elements.forEach((element, index) => {
+                    setTimeout(() => {
+                        element.classList.add('slide-up');
+                    }, index * 150); // Stagger the animations slightly
+                });
             } else {
-                heading.classList.remove('slide-in'); // Remove class when heading is out of view
+                heading.classList.remove('slide-in');
+                elements.forEach(element => element.classList.remove('slide-up'));
             }
         }
 
-        toggleAnimation(projectsSection, projectsHeading);
-        toggleAnimation(skillsSection, skillsHeading);
+        toggleAnimation(projectsSection, projectsHeading, projectCards);
+        toggleAnimation(skillsSection, skillsHeading, skillItems);
     }
 
     window.addEventListener('scroll', handleScroll);
